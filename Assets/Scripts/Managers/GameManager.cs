@@ -79,4 +79,9 @@ public class GameManager : MonoBehaviour
 			loadFinal();
 		}
 	}
+
+	public void LoadFirstScene()
+	{
+		SceneManager.LoadScene("2.5D-First");
+	}
 }

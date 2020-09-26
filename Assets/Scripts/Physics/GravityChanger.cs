@@ -17,12 +17,14 @@ public class GravityChanger : MonoBehaviour
 	private GameObject _remoteController;
 	private float _gravityCoefficient = 0.5f;
 	private float _previousValue;
+	public float _initGravity = 9.8f;
 	
 
 	private void Start()
 	{
-		_previousValue = 0.49f;
-		_gravityValue.text = $"g: {GetNormalizedValue(_previousValue * 20)} м/с^2";
+		PhysicalVariables.GravityScale = _initGravity;
+		_previousValue = _initGravity < 10? _initGravity / 20:(_initGravity - 9.8f) / 80.4f + _gravityCoefficient;
+		_gravityValue.text = $"g: {GetNormalizedValue(_initGravity)} м/с^2";
 		_scrollbar.value = _previousValue;
 	}
 
@@ -39,7 +41,7 @@ public class GravityChanger : MonoBehaviour
 				_gravityScale = 9.8f + (_scrollbarValue - _gravityCoefficient) * 80.4f;
 
 			var _normalizedGravity = GetNormalizedValue(_gravityScale);
-			_gravityValue.text = $"g: {_normalizedGravity} м/с^2";
+			_gravityValue.text = $"g: {_normalizedGravity.ToString("0.0")} м/с^2";
 
 			ChangeGravityScale(_gravityScale);
 		}

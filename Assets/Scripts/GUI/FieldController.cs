@@ -8,14 +8,12 @@ public class FieldController : MonoBehaviour
     public TextMeshPro _letterMesh;
     public TextMeshPro _numberMesh;
     public float _animationTime = 1.5f;
-    private FloatTimer _timer = new FloatTimer(0, 0, 1.5f);
+    internal FloatTimer _timer = new FloatTimer(0, 0, 1.5f);
 
 
     // Start is called before the first frame update
     void Start()
     {
-        setName("G");
-        addValue(100);
     }
 
     // Update is called once per frame
@@ -32,13 +30,13 @@ public class FieldController : MonoBehaviour
     {
         _letterMesh.SetText(letter);
     }
-    public void setValue(int value)
+    public void setValue(float value)
     {
         _numberMesh.SetText(value.ToString());
         _timer = new FloatTimer(value, value, _animationTime);
     }
 
-    public void addValue(int value)
+    public void addValue(float value)
     {
         _timer = new FloatTimer(_timer.getValue(), _timer.getValue() + value, _animationTime);
     }

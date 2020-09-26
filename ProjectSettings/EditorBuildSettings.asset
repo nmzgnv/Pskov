@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/2.5D-Training.unity
     guid: 3668be432df4837468ac3e4445fec754
+  - enabled: 1
+    path: Assets/Scenes/2.5D-First.unity
+    guid: 49a6ca84806bc6648b0087b1fd808836
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 300c8ebda28f75a46953a6a0b57d64c7
   m_configObjects: {}

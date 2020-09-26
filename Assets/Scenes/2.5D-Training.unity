@@ -12009,7 +12009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenes:
-  - 2.5D-Training
+  - 2.5D-First
 --- !u!114 &359680210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12027,6 +12027,7 @@ MonoBehaviour:
   _scrollbar: {fileID: 0}
   _gravityValue: {fileID: 0}
   _remoteController: {fileID: 0}
+  _initGravity: 9.8
 --- !u!4 &359680211
 Transform:
   m_ObjectHideFlags: 0

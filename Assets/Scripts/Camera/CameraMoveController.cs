@@ -10,9 +10,14 @@ public class CameraMoveController : MonoBehaviour
     private Vector3 _offset = new Vector3(2, 10, 0);
     [SerializeField]
     private float _smooth;
+    [SerializeField]
+    private Transform _leftUpCorner;
+    [SerializeField]
+    private Transform _rightDownCorner;
 
     public void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, _target.position + _offset, Time.deltaTime * _smooth);
+        var _newPosition = Vector3.Lerp(transform.position, _target.position + _offset, Time.deltaTime * _smooth);
+        transform.position = _newPosition;
     }
 }

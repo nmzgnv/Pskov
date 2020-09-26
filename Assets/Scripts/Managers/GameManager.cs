@@ -84,4 +84,9 @@ public class GameManager : MonoBehaviour
 	{
 		SceneManager.LoadScene("2.5D-First");
 	}
+
+	public void GameExit()
+	{
+		Application.Quit();
+	}
 }

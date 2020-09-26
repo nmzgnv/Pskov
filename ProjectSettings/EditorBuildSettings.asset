@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScene.unity
     guid: 300c8ebda28f75a46953a6a0b57d64c7
+  - enabled: 1
+    path: Assets/Scenes/ArchimedeScene.unity
+    guid: 4454dde34d9377a44b483ff8b9e1c0cc
   m_configObjects: {}

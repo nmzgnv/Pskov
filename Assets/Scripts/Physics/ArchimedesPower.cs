@@ -5,8 +5,6 @@ using UnityEngine;
 public class ArchimedesPower : MonoBehaviour
 {
 	[SerializeField]
-	private float _archimedesPower = 0;
-	[SerializeField]
 	private Transform _maxHeightPoint;
 	[SerializeField]
 	private Fluid _fluid;
@@ -34,7 +32,7 @@ public class ArchimedesPower : MonoBehaviour
 	{
 		var _underWaterHeight = Mathf.Min(_rbHeight / 2 - (_rb.gameObject.transform.position.y - _maxHeightPoint.position.y), _rbHeight);
 		var _underWaterSize = _underWaterHeight * _rbWidth;
-		var _archimedePower = _fluid.Destiny * PhysicalVariables.GravityScale * _underWaterHeight * 0.1f;
+		var _archimedePower = _fluid.Destiny * PhysicalVariables.GravityScale * _underWaterHeight * 0.5f;
 		_archimedePower = Mathf.Max(0, _archimedePower);
 		Debug.Log(string.Format("[ArchimedesPower.cs] Volume={1:0.0}, mass={2:0.0}, power={3:0.0}", name, _underWaterSize, _rb.mass, _archimedePower));
 		return _archimedePower;

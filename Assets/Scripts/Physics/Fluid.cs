@@ -10,11 +10,12 @@ public class Fluid : MonoBehaviour
 	[SerializeField]
 	private Scrollbar _slider;
 	private AudioSource _audioSource;
-	public float Destiny { get; private set; } = 1000;
+	public float Destiny { get; private set; } 
 
 	private void Start()
 	{
 		_audioSource = GetComponent<AudioSource>();
+		Destiny = _slider.value * 3000 + 1;
 	}
 
 	public void OnChangeDensity()
